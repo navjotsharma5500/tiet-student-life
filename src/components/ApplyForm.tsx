@@ -98,7 +98,7 @@ export function ApplyForm({ cohortId }: { cohortId: string }) {
           <blockquote className="body-copy mt-2">{ACK}</blockquote>
         </figure>
         <div className="mx-auto mt-4 max-w-xl rounded-2xl border border-dashed border-crimson/40 bg-crimson-soft/40 p-4 text-left text-sm text-ink-soft">
-          <p className="font-semibold text-crimson-dark">Prototype notice</p>
+          <p className="font-semibold text-crimson-dark">Preview notice</p>
           <p className="mt-1">Online application submission is not enabled on this preview website yet. No information entered here will be saved or submitted.</p>
         </div>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
