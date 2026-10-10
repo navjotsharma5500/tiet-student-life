@@ -51,7 +51,7 @@ export default function Living() {
             <ul className="mt-6 space-y-4">
               {RULES.map((r) => <li key={r} className="border-t border-white/15 pt-4 text-[0.98rem] leading-7 text-white/85">{r}</li>)}
             </ul>
-            <p className="mt-6 text-sm text-white/60">Room or hostel changes are not a self-service request. Speak to your caretaker or the DoSA Office if you have a genuine concern.</p>
+            <p className="mt-6 text-sm text-white/60">Room or hostel changes are not a self-service request. Speak to your caretaker or the Student Affairs Office if you have a genuine concern.</p>
           </Reveal>
         </div>
 

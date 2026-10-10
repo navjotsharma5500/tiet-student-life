@@ -30,7 +30,7 @@ export const RESIDENT_APP_ONBOARDING: Step[] = [
 
 const DOSA_NEW = (c: Cohort): ProcessContent => ({
   summary:
-    "You apply on this website. The DoSA Office verifies your eligibility and allots both your hostel and your room number. You then pay online in the Resident App and report to your hostel caretaker.",
+    "You apply on this website. The Student Affairs Office verifies your eligibility and allots both your hostel and your room number. You then pay online in the Resident App and report to your hostel caretaker.",
   eligibility: [
     c.level === "phd" ? "Confirmed PhD admission at TIET." : "Confirmed admission at TIET" + (c.stream === "TSLAS" ? " through the Thapar School of Liberal Arts and Sciences." : "."),
     "Academic fee paid.",
@@ -42,9 +42,9 @@ const DOSA_NEW = (c: Cohort): ProcessContent => ({
     intro: "Apply through the Student Life website’s own hostel application form — not a Google Form.",
     steps: [
       { title: "Submit the hostel application form", detail: "Fill in student, parent and address details and upload your admission letter.", who: "You" },
-      { title: "No hostel preference is collected", detail: "You do not choose a hostel or room type — the DoSA Office allots both." },
-      { title: "Eligibility verification", detail: "The DoSA Office checks your admission and academic fee status.", who: "DoSA Office" },
-      { title: "Hostel and room number allotted", detail: "DoSA allots your hostel and your specific room number.", who: "DoSA Office" },
+      { title: "No hostel preference is collected", detail: "You do not choose a hostel or room type — the Student Affairs Office allots both." },
+      { title: "Eligibility verification", detail: "The Student Affairs Office checks your admission and academic fee status.", who: "Student Affairs Office" },
+      { title: "Hostel and room number allotted", detail: "DoSA allots your hostel and your specific room number.", who: "Student Affairs Office" },
       { title: "Allotment appears in the Resident App", detail: "You receive an onboarding email for the Dormly Thapar Resident App." },
     ],
   },
@@ -132,11 +132,11 @@ const CONTINUING: ProcessContent = {
   application: {
     intro: "The active hostel allocation notice sets the dates and limits for this session.",
     steps: [
-      { title: "Allocation notice published", detail: "It contains application / preference dates, allotment dates and the payment / room-booking window.", dynamic: true, who: "DoSA Office" },
+      { title: "Allocation notice published", detail: "It contains application / preference dates, allotment dates and the payment / room-booking window.", dynamic: true, who: "Student Affairs Office" },
       { title: "Open your existing Resident App account", who: "You" },
       { title: "Apply individually — or make a group", detail: "You can make a group. The group leader manages the group’s preferences." },
       { title: "Submit hostel preferences", detail: "The number of preferences is as specified in the active allocation notice.", dynamic: true },
-      { title: "Allotment by CGPA", detail: "Individual CGPA, or average CGPA for groups. Subject to availability and discipline-record review.", who: "DoSA Office" },
+      { title: "Allotment by CGPA", detail: "Individual CGPA, or average CGPA for groups. Subject to availability and discipline-record review.", who: "Student Affairs Office" },
     ],
   },
   payment: {

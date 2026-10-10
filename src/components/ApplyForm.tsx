@@ -198,7 +198,7 @@ export function ApplyForm({ cohortId }: { cohortId: string }) {
       <div data-field="declare" className="rounded-2xl border border-line bg-white p-5">
         <label className="flex cursor-pointer gap-3 text-sm leading-6 text-ink-soft">
           <input type="checkbox" className="mt-1 h-4 w-4 accent-crimson" checked={v.declare === "yes"} onChange={(e) => set("declare", e.target.checked ? "yes" : "")} />
-          I confirm the details above are correct. I understand that hostel and room allocation is subject to availability and applicable Institute rules, and that the DoSA Office allots both the hostel and the room number.
+          I confirm the details above are correct. I understand that hostel and room allocation is subject to availability and applicable Institute rules, and that the Student Affairs Office allots both the hostel and the room number.
         </label>
         {errors.declare && <p className="mt-2 text-sm text-crimson">{errors.declare}</p>}
       </div>

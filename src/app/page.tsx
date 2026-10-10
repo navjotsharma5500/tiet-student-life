@@ -106,7 +106,7 @@ export default function Home() {
                     <FileText className="mt-1 h-4 w-4 shrink-0 text-crimson" aria-hidden />
                     <span className="flex-1">
                       <span className="block font-semibold text-ink group-hover:text-crimson">{n.title}</span>
-                      <span className="block text-sm text-ink-muted">{n.category} · {n.audience}</span>
+                      <span className="block text-sm text-ink-muted">{n.subtitle ? `${n.category} · ${n.subtitle}` : n.category}</span>
                     </span>
                     <ArrowRight className="mt-1 h-4 w-4 text-ink-muted transition-transform group-hover:translate-x-1" aria-hidden />
                   </Link>
@@ -116,7 +116,7 @@ export default function Home() {
             <Link href="/notices" className="link-underline mt-5 inline-block text-sm font-semibold">All notices</Link>
           </div>
           <Reveal className="rounded-[1.5rem] bg-cream p-6 md:p-8">
-            <p className="eyebrow">DoSA Office</p>
+            <p className="eyebrow">Student Affairs Office</p>
             <div className="mt-5 flex items-center gap-4">
               {dean.photo && <Img src={dean.photo} alt={dean.name} className="h-20 w-20 shrink-0 rounded-full" width={200} />}
               <div>

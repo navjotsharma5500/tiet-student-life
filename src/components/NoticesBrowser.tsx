@@ -1,20 +1,19 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { FileText, Search } from "lucide-react";
+import { ArrowUpRight, FileText, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { NOTICES, type Notice } from "@/data/directory";
-import { DynamicTag } from "./ui";
 import { EASE } from "./motion";
 
-const CATS: ("All" | Notice["category"])[] = ["All", "Hostel Allocation", "Fees", "Reporting", "Residence Rules", "General"];
+const CATS: ("All" | Notice["category"])[] = ["All", "Hostel Allocation", "Fees", "Reporting", "Residence Rules", "ID Cards"];
 
 export function NoticesBrowser() {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<(typeof CATS)[number]>("All");
   const list = useMemo(() => NOTICES.filter((n) =>
     (cat === "All" || n.category === cat) &&
-    (!q.trim() || `${n.title} ${n.summary} ${n.audience}`.toLowerCase().includes(q.toLowerCase())),
+    (!q.trim() || `${n.title} ${n.subtitle ?? ""} ${n.category}`.toLowerCase().includes(q.trim().toLowerCase())),
   ), [q, cat]);
 
   return (
@@ -38,22 +37,24 @@ export function NoticesBrowser() {
         <AnimatePresence initial={false}>
           {list.map((n) => (
             <motion.li key={n.id} id={n.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3, ease: EASE }}
-              className="scroll-mt-32 py-5 target:bg-butter/40">
-              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-8">
+              className="scroll-mt-32 target:bg-butter/40">
+              <a href={n.pdf} target="_blank" rel="noopener noreferrer" aria-label={`${n.title} — open PDF in a new tab`}
+                className="group flex flex-col gap-3 py-5 outline-none focus-visible:ring-2 focus-visible:ring-crimson focus-visible:ring-offset-2 focus-visible:ring-offset-cream md:flex-row md:items-start md:justify-between md:gap-8">
                 <div className="flex gap-4">
                   <FileText className="mt-1 h-5 w-5 shrink-0 text-crimson" aria-hidden />
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{n.category}</p>
-                    <h2 className="mt-1 font-serif text-[1.3rem] leading-snug text-ink">{n.title}</h2>
-                    <p className="body-copy mt-1">{n.summary}</p>
-                    <p className="mt-2 text-sm text-ink-muted"><span className="font-semibold text-ink-soft">For:</span> {n.audience}</p>
+                    <h2 className="mt-1 font-serif text-[1.3rem] leading-snug text-ink transition-colors group-hover:text-crimson">{n.title}</h2>
+                    {n.subtitle && <p className="mt-1.5 text-sm text-ink-muted">{n.subtitle}</p>}
                   </div>
                 </div>
                 <div className="flex shrink-0 items-center gap-3 pl-9 md:flex-col md:items-end md:pl-0">
-                  <span className="text-sm text-ink-muted">{n.date ?? "Date: when published"}</span>
-                  <DynamicTag>{n.pdf ? "PDF" : "PDF pending"}</DynamicTag>
+                  <span className="rounded-md bg-crimson/10 px-2 py-0.5 text-[0.68rem] font-bold uppercase tracking-wider text-crimson">PDF</span>
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-crimson">
+                    View PDF <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
+                  </span>
                 </div>
-              </div>
+              </a>
             </motion.li>
           ))}
         </AnimatePresence>

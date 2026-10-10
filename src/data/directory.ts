@@ -113,7 +113,7 @@ export const STAFF: StaffTier[] = [
     { name: "Mr. Harpreet Singh Virdi", role: "All Hostels Manager", photo: `${S}/Mr.%20Harpreet%20Singh%20Virdi.jpg?updatedAt=1790456505534`, photoPosition: "center 25%", email: "harpreet.virdi@thapar.edu", interaction: "flip-contact" },
     { name: "Mr. Navjot Sharma", role: "Associate IT, All Hostels", photo: `${S}/IMG_4888.JPG?updatedAt=1790456505522`, photoPosition: "center 20%", email: "itmh@thapar.edu", interaction: "flip-contact" },
   ] },
-  { id: "office", title: "Office Team", note: "Your first point of contact at the DoSA Office. Tap a card for the official email.", layout: "mini", people: [
+  { id: "office", title: "Office Team", note: "Your first point of contact at the Student Affairs Office. Tap a card for the official email.", layout: "mini", people: [
     { name: "Mr. Naminder Kumar", role: "Senior Assistant", photo: `${S}/Mr.%20Naminder%20Kumar.jpg?updatedAt=1790456505506`, photoPosition: "center 25%", email: "dosa.office@thapar.edu", interaction: "flip-contact" },
     { name: "Mr. Surinder Singh", role: "Senior Associate", photo: `${S}/Mr.%20Surinder%20Singh.jpg?updatedAt=1790456505549`, photoPosition: "center 25%", email: "dosa.office@thapar.edu", interaction: "flip-contact" },
     { name: "Mr. Raghav Bhatnagar", role: "Senior Associate", photo: `${S}/Mr.%20Raghav%20Bhatnagar.jpg?updatedAt=1790456505551`, photoPosition: "center 25%", email: "dosa.office@thapar.edu", interaction: "flip-contact" },
@@ -134,30 +134,41 @@ export const STAFF_SOURCE_META = { roles: "https://www.thapar.edu/students/pages
 export type Notice = {
   id: string;
   title: string;
-  category: "Hostel Allocation" | "Fees" | "Reporting" | "Residence Rules" | "General";
-  audience: string;
-  date: string | null; // null = to be published
-  pdf: string | null;
-  summary: string;
+  /** Applicability line, where the notice names who it is for. */
+  subtitle?: string;
+  category: "Hostel Allocation" | "Fees" | "Reporting" | "Residence Rules" | "ID Cards";
+  /** Official PDF, opened directly in a new tab. */
+  pdf: string;
 };
 
 /** Maintainer reference only — not linked from the public UI. */
 export const LEGACY_NOTICES_SOURCE = "https://thapar.edu/students/pages/student-notices";
 export const CAMPUS_NOTICES_URL = "https://campusconnect.thapar.edu/student-notices";
 
+const SC = "https://ik.imagekit.io/itmh/Guest%20Room%20Website/Student%20Circulars";
+
 export const NOTICES: Notice[] = [
-  { id: "n1", title: "Hostel Allocation Notice — continuing students", category: "Hostel Allocation", audience: "Second year onwards (UG, TSLAS, PG, PhD)", date: null, pdf: null,
-    summary: "Application / preference dates, allotment dates, preference limit and the payment & room-booking window." },
-  { id: "n2", title: "Hostel & Mess Fee Notice — academic year", category: "Fees", audience: "All residents", date: null, pdf: null,
-    summary: "Governing record for room-type fees and the mess fee for the session." },
-  { id: "n3", title: "Reporting circular — new admissions (DoSA)", category: "Reporting", audience: "First-Year TSLAS, First-Year PG, PhD new admission", date: null, pdf: null,
-    summary: "Reporting date and caretaker-office instructions for students allotted through DoSA." },
-  { id: "n4", title: "Reporting circular — continuing residents", category: "Reporting", audience: "Second year onwards", date: null, pdf: null,
-    summary: "Reporting date for continuing residents after room booking." },
-  { id: "n5", title: "Hostel Rules & Regulations", category: "Residence Rules", audience: "All residents", date: null, pdf: null,
-    summary: "The undertaking signed at reporting, timings, leave and conduct rules." },
-  { id: "n6", title: "Hostel refund policy", category: "Fees", audience: "All residents", date: null, pdf: null,
-    summary: "Refund windows and how days are counted for refunds and room-fee adjustments." },
+  { id: "n1", title: "Hostel Fee Structure", category: "Fees",
+    pdf: `${SC}/Fee%20Structure%20Odd%20Sem%20July%20to%20Dec%20(2026-27).pdf` },
+  { id: "n2", title: "NOTICE – Reporting Schedule & Mess Fee Payment Guidelines", category: "Reporting",
+    subtitle: "ODD Semester 2026–27 • TIET / TSLAS • UG 2nd, 3rd & Final Year • PG Students",
+    pdf: `${SC}/Reporting%20Schedule.pdf` },
+  { id: "n3", title: "NOTICE – Hostel Allotment for Session ODD Sem 2026–27", category: "Hostel Allocation",
+    subtitle: "UG 2nd, 3rd & 4th Year • TSLAS 2nd / 3rd / 4th Year onwards • PhD / PG 2nd Year",
+    pdf: `${SC}/Hostel_Allotment_Notice_2026-27.pdf` },
+  { id: "n4", title: "NOTICE – ID Card Issue, Session 2026–27", category: "ID Cards",
+    subtitle: "All Branches – UG | PG | PhD | TSLAS Students",
+    pdf: `${SC}/ID%20Card%20Notice%20Odd%20Sem%2026-27.pdf` },
+  { id: "n5", title: "Hostel Allocation Process | Session 2026–27", category: "Hostel Allocation",
+    subtitle: "Applicable for: Newly Admitted First Year TSLAS Students",
+    pdf: `${SC}/TIET_Hostel_Allocation_Notice_TSLAS_2026-27.pdf` },
+  { id: "n6", title: "Hostel Cancellation & Refund Policy – ODD Sem 2026–27", category: "Fees",
+    pdf: `${SC}/Hostel_Cancellation_Refund_Policy_ODD_Sem_2026-27_Styled.pdf` },
+  // Display title is 2026–2027 as instructed; the PDF filename itself says 2025-2026.
+  { id: "n7", title: "Admissions 2026–2027 Refund Policy", category: "Fees",
+    pdf: `${SC}/Admissions%202025-2026%20Refund%20Policy.pdf` },
+  { id: "n8", title: "Procedure for Issue of Duplicate ID Card – Lost / Damage / Updation", category: "ID Cards",
+    pdf: "https://ik.imagekit.io/7khjnlfow/Public%20Forms/Lost_ID_Card.pdf" },
 ];
 
 export const CIRCULAR_SLOTS = [

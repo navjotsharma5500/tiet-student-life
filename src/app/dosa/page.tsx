@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/ui";
 import { Reveal } from "@/components/motion";
 import { StaffCard } from "@/components/StaffCard";
 
-export const metadata: Metadata = { title: "DoSA Office" };
+export const metadata: Metadata = { title: "Student Affairs Office" };
 
 /** Grid per tier layout. Order and layout both come from data (STAFF). */
 const GRID: Record<StaffTier["layout"], string> = {
@@ -19,7 +19,7 @@ export default function Dosa() {
   return (
     <>
       <PageHeader
-        crumbs={[{ label: "Home", href: "/" }, { label: "DoSA Office" }]}
+        crumbs={[{ label: "Home", href: "/" }, { label: "Student Affairs Office" }]}
         eyebrow="Office of the Dean of Student Affairs"
         title="The people behind student life"
         lede="Residence, welfare, counselling, sports, food and the everyday running of the hostels."

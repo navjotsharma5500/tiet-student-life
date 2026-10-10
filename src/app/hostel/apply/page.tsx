@@ -15,7 +15,7 @@ export default function ApplyChooser() {
         crumbs={[{ label: "Hostel & Housing", href: "/hostel" }, { label: "Apply for Hostel" }]}
         eyebrow="Hostel & Housing"
         title="Apply for hostel accommodation"
-        lede="The website application is for new admissions allotted by the DoSA Office. Choose your cohort to open the right form."
+        lede="The website application is for new admissions allotted by the Student Affairs Office. Choose your cohort to open the right form."
       />
       <div className="container py-12">
         <ul className="grid gap-4 md:grid-cols-2">

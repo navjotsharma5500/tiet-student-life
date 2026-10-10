@@ -27,7 +27,7 @@ export const NAV: NavItem[] = [
   { label: "Online Portals", href: "/portals" },
   { label: "Notices", href: "/notices" },
   { label: "Campus Life", href: "/campus-life" },
-  { label: "DoSA Office", href: "/dosa" },
+  { label: "Student Affairs Office", href: "/dosa" },
 ];
 
 export function SiteHeader() {

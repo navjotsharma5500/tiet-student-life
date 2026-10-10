@@ -10,7 +10,7 @@ const cols = [
     ["Resident App", "/hostel/resident-app"], ["Living in Residence", "/hostel/living"], ["Check-out & No Dues", "/hostel/checkout"], ["Circulars", "/hostel/circulars"],
   ] },
   { title: "Student Affairs", links: [
-    ["Student Journey", "/journey"], ["Online Portals", "/portals"], ["Notices", "/notices"], ["Campus Life", "/campus-life"], ["DoSA Office", "/dosa"],
+    ["Student Journey", "/journey"], ["Online Portals", "/portals"], ["Notices", "/notices"], ["Campus Life", "/campus-life"], ["Student Affairs Office", "/dosa"],
   ] },
 ];
 
@@ -43,7 +43,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container flex flex-col gap-2 py-5 text-xs text-white/50 sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Thapar Institute of Engineering &amp; Technology</span>
-          <span>Student Life portal · design prototype</span>
+          <span>Student Life</span>
         </div>
       </div>
     </footer>

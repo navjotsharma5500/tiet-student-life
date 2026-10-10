@@ -73,14 +73,14 @@ export function HostelContacts({ c }: { c: HostelOperationalContact }) {
         </div>
       ) : (
         <p className="body-copy mt-3">
-          Warden and caretaker details for this residence are being added. At reporting, go straight to the hostel’s caretaker office; for allotment queries, contact the DoSA Office.
+          Warden and caretaker details for this residence are being added. At reporting, go straight to the hostel’s caretaker office; for allotment queries, contact the Student Affairs Office.
         </p>
       )}
 
       <div className="mt-5 rounded-2xl bg-ink p-4 text-sm text-white">
         <p className="font-semibold">Allotment or fee questions?</p>
-        <p className="mt-1 text-white/70">The DoSA Office handles allotment. For room, maintenance and key matters, start with your caretaker.</p>
-        <Link href="/dosa" className="mt-2 inline-block font-semibold underline decoration-white/40 underline-offset-4 hover:decoration-white">DoSA Office directory</Link>
+        <p className="mt-1 text-white/70">The Student Affairs Office handles allotment. For room, maintenance and key matters, start with your caretaker.</p>
+        <Link href="/dosa" className="mt-2 inline-block font-semibold underline decoration-white/40 underline-offset-4 hover:decoration-white">Student Affairs Office directory</Link>
       </div>
     </section>
   );

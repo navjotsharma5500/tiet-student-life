@@ -24,7 +24,7 @@ const ROUTES: { id: ProcessId; name: string; tint: string; rows: Record<string, 
   {
     id: "dosa-new", name: "DoSA New Admissions", tint: "bg-sky",
     rows: {
-      "Handled by": "DoSA Office",
+      "Handled by": "Student Affairs Office",
       "How you apply": "Hostel application form on this website",
       "Preferences": "None — DoSA allots hostel and room number",
       "Allocation basis": "Eligibility verification by DoSA",
@@ -36,7 +36,7 @@ const ROUTES: { id: ProcessId; name: string; tint: string; rows: Record<string, 
   {
     id: "continuing", name: "Second Year Onwards", tint: "bg-mint",
     rows: {
-      "Handled by": "DoSA Office · Hostel Allocation",
+      "Handled by": "Student Affairs Office · Hostel Allocation",
       "How you apply": "In the Resident App, alone or as a group",
       "Preferences": "Limit set in the active allocation notice",
       "Allocation basis": "CGPA (group: average CGPA); discipline record may be reviewed",

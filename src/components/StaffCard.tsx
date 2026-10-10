@@ -190,7 +190,7 @@ export function FlipCard({ p, size, tint = "bg-sky" }: { p: Person; size: "compa
             </a>
           </div>
         ) : (
-          <p className="text-sm text-white/70">Contact via the DoSA Office.</p>
+          <p className="text-sm text-white/70">Contact via the Student Affairs Office.</p>
         )}
         <span className="inline-flex items-center gap-1 self-end text-[0.68rem] text-white/50"><RotateCcw className="h-3 w-3" aria-hidden /> Tap to flip back</span>
       </motion.div>

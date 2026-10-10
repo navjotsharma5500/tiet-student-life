@@ -102,7 +102,7 @@ export const COHORTS: Cohort[] = [
   {
     ...base, id: "ug-eng-2", level: "ug", year: "Second Year", stream: "Engineering",
     title: "Second-Year Engineering Undergraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation",
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation",
     allocation: {
       boys: [A("B", "1S_AC", "2S_AC"), A("D", "2S_WST_AC"), A("C", "2S_AC", "3S_AC"), A("L", "2S_AC"), A("J", "2S_AC"), A("O", "2S_WST_AC")],
       girls: [A("PG", "2S_WST_AC"), A("PG-II", "2S_WST_AC")],
@@ -111,12 +111,12 @@ export const COHORTS: Cohort[] = [
   {
     ...base, id: "ug-tslas-2", level: "ug", year: "Second Year", stream: "TSLAS",
     title: "Second-Year TSLAS Undergraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation", allocation: TSLAS_ALLOC,
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation", allocation: TSLAS_ALLOC,
   },
   {
     ...base, id: "ug-eng-3", level: "ug", year: "Third Year", stream: "Engineering",
     title: "Third-Year Engineering Undergraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation",
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation",
     allocation: {
       boys: [A("A", "2S_WST_AC"), A("M", "2S_WST_AC"), A("J", "1S_AC"), A("O", "2S_WST_AC")],
       girls: [A("PG-II", "2S_WST_AC"), A("Q", "2S_WST_AC")],
@@ -125,12 +125,12 @@ export const COHORTS: Cohort[] = [
   {
     ...base, id: "ug-tslas-3", level: "ug", year: "Third Year", stream: "TSLAS",
     title: "Third-Year TSLAS Undergraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation", allocation: TSLAS_ALLOC,
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation", allocation: TSLAS_ALLOC,
   },
   {
     ...base, id: "ug-eng-4", level: "ug", year: "Fourth Year", stream: "Engineering",
     title: "Fourth-Year Engineering Undergraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation",
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation",
     allocation: {
       boys: [A("M", "2S_WST_AC", "2S_WAT_AC", "1S_WST_AC", "1S_WAT_AC"), A("J", "1S_AC")],
       girls: [A("N", "2S_WST_AC", "1S_WST_AC", "1S_WAT_AC"), A("Q", "2S_WST_AC"), A("E", "1S_AC"), A("G", "1S_AC")],
@@ -139,7 +139,7 @@ export const COHORTS: Cohort[] = [
   {
     ...base, id: "ug-tslas-4", level: "ug", year: "Fourth Year", stream: "TSLAS",
     title: "Fourth-Year TSLAS Undergraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation", allocation: TSLAS_ALLOC,
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation", allocation: TSLAS_ALLOC,
   },
   {
     ...base, id: "pg-eng-1", level: "pg", year: "First Year", stream: "TIET",
@@ -156,7 +156,7 @@ export const COHORTS: Cohort[] = [
   {
     ...base, id: "pg-2", level: "pg", year: "Second Year", stream: "All programmes",
     title: "Second-Year Postgraduate", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation",
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation",
     allocation: {
       boys: [A("J", "1S_AC"), A("L", "2S_AC")],
       girls: [A("PG", "2S_WST_AC"), A("PG-II", "2S_WST_AC")],
@@ -174,7 +174,7 @@ export const COHORTS: Cohort[] = [
   {
     ...base, id: "phd-existing", level: "phd", year: "Second Year Onwards", stream: "Doctoral",
     title: "PhD — Second Year Onwards", short: "Continuing resident", isNewAdmission: false,
-    process: "continuing", handledBy: "DoSA Office · Hostel Allocation",
+    process: "continuing", handledBy: "Student Affairs Office · Hostel Allocation",
     allocation: { boys: [A("J", "1S_AC")], girls: [A("I", "1S_AC")] },
   },
 ];

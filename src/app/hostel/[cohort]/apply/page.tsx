@@ -31,7 +31,7 @@ export default async function Apply({ params }: P) {
                   ? "Your hostel preferences are collected by the Admission Cell through the link sent to your email."
                   : "Continuing residents apply directly in the Resident App when the hostel allocation notice opens."}
               </p>
-              <p className="body-copy mt-2">The website form is used only by new admissions allotted by the DoSA Office (First-Year TSLAS, First-Year PG and PhD new admission).</p>
+              <p className="body-copy mt-2">The website form is used only by new admissions allotted by the Student Affairs Office (First-Year TSLAS, First-Year PG and PhD new admission).</p>
               <div className="mt-5 flex flex-wrap gap-5">
                 <ArrowLink href={`/hostel/${c.id}/process`}>How allocation works for you</ArrowLink>
                 <ArrowLink href={`/hostel/${c.id}`}>Back to your guide</ArrowLink>
@@ -49,7 +49,7 @@ export default async function Apply({ params }: P) {
         c={c}
         page="Apply"
         title="Hostel Accommodation Application"
-        lede="Takes about 10 minutes. Keep your admission letter ready as a PDF. You do not choose a hostel — the DoSA Office allots both your hostel and room number."
+        lede="Takes about 10 minutes. Keep your admission letter ready as a PDF. You do not choose a hostel — the Student Affairs Office allots both your hostel and room number."
       />
       <div className="container grid grid-cols-1 gap-12 py-10 md:py-14 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <ApplyForm cohortId={c.id} />
@@ -65,7 +65,7 @@ export default async function Apply({ params }: P) {
                 <li>Report to your caretaker</li>
               </ol>
             </div>
-            <p className="px-1 text-ink-muted">Need help? <Link href="/dosa" className="link-underline text-ink">Contact the DoSA Office</Link>.</p>
+            <p className="px-1 text-ink-muted">Need help? <Link href="/dosa" className="link-underline text-ink">Contact the Student Affairs Office</Link>.</p>
           </div>
         </aside>
       </div>

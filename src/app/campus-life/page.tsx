@@ -112,7 +112,7 @@ export default function CampusLife() {
           <Reveal>
             <p className="eyebrow">Health centre</p>
             <h2 className="mt-2 text-[2rem] leading-tight">Care on campus</h2>
-            <p className="body-copy mt-4 max-w-md text-base">The campus health centre supports students day to day. The TIET Health Hub carries services and information, and the Counselling Cell (TICC) is part of the DoSA Office.</p>
+            <p className="body-copy mt-4 max-w-md text-base">The campus health centre supports students day to day. The TIET Health Hub carries services and information, and the Counselling Cell (TICC) is part of the Student Affairs Office.</p>
             <div className="mt-6 flex flex-wrap gap-4">
               <a href="https://campusconnect.thapar.edu/dispensary" target="_blank" rel="noopener noreferrer" className="btn-primary">TIET Health Hub <ArrowUpRight className="h-4 w-4" /></a>
               <Link href="/dosa" className="btn-ghost">Counselling Cell</Link>
