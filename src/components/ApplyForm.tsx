@@ -99,7 +99,7 @@ export function ApplyForm({ cohortId }: { cohortId: string }) {
         </figure>
         <div className="mx-auto mt-4 max-w-xl rounded-2xl border border-dashed border-crimson/40 bg-crimson-soft/40 p-4 text-left text-sm text-ink-soft">
           <p className="font-semibold text-crimson-dark">Prototype notice</p>
-          <p className="mt-1">This is a design prototype. Nothing was uploaded, saved or emailed, and no application ID was created. In production this step will store the application, issue an ID, set status to <em>Pending</em> and send the acknowledgement from noreply_hostelallotment1@thapar.edu.</p>
+          <p className="mt-1">Online application submission is not enabled on this preview website yet. No information entered here will be saved or submitted.</p>
         </div>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Link href={`/hostel/${c.id}#process`} className="btn-ghost justify-center">Back to your guide</Link>
